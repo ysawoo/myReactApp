@@ -1,16 +1,54 @@
 
 
+
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import TareasPage from "./TareasPage";
+import DetalleTarea from "./DetalleTarea";
+
 function App() {
-  const nombre= "Ysabel Garzón"
-  const edad= 20;
-  const ocupación="estudiante"
+
   return (
-    <div className="App">
-      <h1>Hola mi nombre es{nombre}</h1>
-        <h2>Tengo{edad}años</h2>
-        <p>Mi profesion es{ocupación}</p>
-      
-    </div>
+    <Router>
+      <div>
+        <h1>Mi Aplicación de Tareas</h1>
+        <Routes>
+          <Route path="/" element={<TareasPage />} />
+          <Route path="/tarea/:id" element={<DetalleTarea />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
+
 export default App;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
